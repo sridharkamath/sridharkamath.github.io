@@ -1,0 +1,187 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background: #fff;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+  h1 {
+    font-size: 3em;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 2em;
+    color: #1A2980;  /* Deep blue theme color */
+    margin-bottom: 0.5em;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 1.25em;
+    margin: 0.5em 0 0.2em;
+    font-weight: 600;
+  }
+  p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+  }
+  ul {
+    margin: 0 0 1em 1.2em; /* add indentation for list bullets */
+  }
+  li {
+    margin-bottom: 0.5em;
+  }
+  
+  /* Links */
+  a {
+    color: #1A2980;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #26D0CE;
+    text-decoration: none;
+  }
+  
+  /* Container for centered layout */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #1A2980;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  .nav-links li {
+    margin-left: 20px;
+  }
+  .nav-links a {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: #1A2980;
+  }
+  .hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  /* Hero Section */
+  #hero {
+    background: linear-gradient(135deg, #1A2980, #26D0CE);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-content h1 {
+    margin-bottom: 0.5em;
+  }
+  .hero-content p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto 1.5em;
+  }
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+  }
+  .btn:hover {
+    background: #fff;
+    color: #1A2980;
+  }
+  
+  /* Sections (spacing and layout) */
+  section {
+    scroll-margin-top: 70px;  /* offset for sticky nav when linked */
+  }
+  section:not(#hero) {
+    padding: 60px 20px;
+  }
+  #education .edu-item, 
+  #experience .experience-item, 
+  #projects .project-item {
+    margin-bottom: 1.5em;
+  }
+  #education .edu-item h3, 
+  #experience .experience-item h3, 
+  #projects .project-item h3 {
+    font-weight: 600;
+  }
+  #education .edu-item p, 
+  #experience .experience-item p, 
+  #projects .project-item p {
+    margin-left: 0.5em;
+  }
+  
+  /* Footer */
+  footer {
+    background: #f7f7f7;
+    padding: 20px 0;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Responsive Design: Mobile Navigation */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;             /* hide menu links on mobile by default */
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      background: #fff;
+      text-align: center;
+    }
+    .nav-links.active {
+      display: flex;             /* show menu when active */
+    }
+    .nav-links li {
+      margin: 10px 0;
+    }
+    .hamburger {
+      display: block;            /* show hamburger icon on mobile */
+    }
+  }
+  
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
